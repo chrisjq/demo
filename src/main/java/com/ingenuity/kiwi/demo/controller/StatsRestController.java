@@ -36,6 +36,11 @@ public class StatsRestController implements ErrorController {
 		return sRepo.findAll();
 	}
 	
+	/**
+	 * Get a departments stats by its ID.
+	 * @param deptID
+	 * @return
+	 */
 	@GetMapping("/api/stats/dept/{deptID}")
 	List<Statistic> getByDepartment(@PathVariable("deptID") Long deptID) {
 		logger.info("Getting all eith Department ID: " + deptID);
