@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Jun 13 16:49:11 NZST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017a-03b3-c767-00001b786ca0 
+on database directory memory:/Users/chris/eclipse-workspace-2021/demo/f3148cec-6de8-4984-b7b9-42fa1de26a66 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2c13da15 
+Loaded from file:/Users/chris/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=AdoptOpenJDK
+java.runtime.version=11.0.11+9
+user.dir=/Users/chris/eclipse-workspace-2021/demo
+os.name=Mac OS X
+os.arch=x86_64
+os.version=11.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
