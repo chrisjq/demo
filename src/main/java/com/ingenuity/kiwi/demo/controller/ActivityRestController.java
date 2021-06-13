@@ -6,26 +6,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ingenuity.kiwi.demo.entities.Activity;
-import com.ingenuity.kiwi.demo.entities.Department;
 import com.ingenuity.kiwi.demo.repo.ActivityRepo;
 
 @RestController
-public class ActivityRestController implements ErrorController{
+public class ActivityRestController implements ErrorController {
 	private final ActivityRepo repo;
-	
-	Logger logger = LoggerFactory.getLogger(ActivityRestController.class);
-	
-	public ActivityRestController( ActivityRepo repo) {
+
+	private static final Logger logger = LoggerFactory.getLogger(ActivityRestController.class);
+
+	public ActivityRestController(ActivityRepo repo) {
 		this.repo = repo;
 	}
 
-
 	@GetMapping("/api/activity")
 	List<Activity> all() {
+		logger.info("Getting all");
 		return repo.findAll();
 	}
 }

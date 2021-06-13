@@ -102,32 +102,38 @@ class DBTestLoader {
 			for (StatsDayEnum e : StatsDayEnum.values()) {
 				switch (e) {
 				case Monday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(15073 * 5l).build()));
+					log.info(
+							"Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA)
+									.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(15073 * 5l).build()));
 					break;
 				case Tuesday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(24555 * 5l).build()));
+					log.info(
+							"Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA)
+									.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(24555 * 5l).build()));
 					break;
 				case Wednesday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(13000 * 5l).build()));
+					log.info(
+							"Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA)
+									.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(13000 * 5l).build()));
 					break;
 				case Thursday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(18832 * 5l).build()));
+					log.info(
+							"Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA)
+									.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(18832 * 5l).build()));
 					break;
 				case Friday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(10009 * 5l).build()));
+					log.info(
+							"Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA)
+									.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(10009 * 5l).build()));
 					break;
 				case Saturday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(1556 * 5l).build()));
+					log.info(
+							"Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA)
+									.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(1556 * 5l).build()));
 					break;
 				case Sunday:
-					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(scanA).dayEnum(e)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(0l).build()));
+					log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD)
+							.activity(scanA).dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(0l).build()));
 					break;
 				}
 

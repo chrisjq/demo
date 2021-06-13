@@ -19,10 +19,10 @@ import lombok.NonNull;
 @Table(name = "department")
 public class Department {
 	@Id
-    @GeneratedValue
-    private Long id;
-	
+	@GeneratedValue
+	private Long id;
+
 	@NonNull
-    private String departmentName;
+	private String departmentName;
 
 }

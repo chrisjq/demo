@@ -19,12 +19,10 @@ import lombok.NonNull;
 @Table(name = "activity")
 public class Activity {
 	@Id
-    @GeneratedValue
-    private Long id;
-	
+	@GeneratedValue
+	private Long id;
+
 	@NonNull
-    private String activityName;
-    
-    
+	private String activityName;
 
 }
