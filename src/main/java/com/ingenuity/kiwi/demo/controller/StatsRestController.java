@@ -17,6 +17,11 @@ import com.ingenuity.kiwi.demo.repo.DepartmentRepo;
 import com.ingenuity.kiwi.demo.repo.StatisticsRepo;
 
 @RestController
+/**
+ * Statistics controller.
+ * @author chris
+ *
+ */
 public class StatsRestController implements ErrorController {
 	private final StatisticsRepo sRepo;
 

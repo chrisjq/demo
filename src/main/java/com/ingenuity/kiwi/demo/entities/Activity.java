@@ -17,6 +17,11 @@ import lombok.NonNull;
 @Builder
 @Entity
 @Table(name = "activity")
+/**
+ * Stores an activity.
+ * @author chris
+ *
+ */
 public class Activity {
 	@Id
 	@GeneratedValue

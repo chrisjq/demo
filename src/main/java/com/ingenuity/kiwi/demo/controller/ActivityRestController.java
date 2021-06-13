@@ -12,6 +12,11 @@ import com.ingenuity.kiwi.demo.entities.Activity;
 import com.ingenuity.kiwi.demo.repo.ActivityRepo;
 
 @RestController
+/**
+ * Rest controller for Activities.
+ * @author chris
+ *
+ */
 public class ActivityRestController implements ErrorController {
 	private final ActivityRepo repo;
 

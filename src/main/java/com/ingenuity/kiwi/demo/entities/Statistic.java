@@ -23,6 +23,11 @@ import lombok.NonNull;
 @Builder
 @Entity
 @Table(name = "statistic")
+/**
+ * Stores statistics for a Department and Activity in seconds.
+ * @author chris
+ *
+ */
 public class Statistic {
 	@Id
 	@GeneratedValue

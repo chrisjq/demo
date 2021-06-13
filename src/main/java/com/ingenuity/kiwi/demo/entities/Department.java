@@ -17,6 +17,11 @@ import lombok.NonNull;
 @Builder
 @Entity
 @Table(name = "department")
+/**
+ * Stores a department.
+ * @author chris
+ *
+ */
 public class Department {
 	@Id
 	@GeneratedValue

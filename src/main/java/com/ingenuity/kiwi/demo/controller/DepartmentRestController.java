@@ -12,6 +12,11 @@ import com.ingenuity.kiwi.demo.entities.Department;
 import com.ingenuity.kiwi.demo.repo.DepartmentRepo;
 
 @RestController
+/**
+ * Controller for Departments.
+ * @author chris
+ *
+ */
 public class DepartmentRestController implements ErrorController {
 	private final DepartmentRepo repo;
 

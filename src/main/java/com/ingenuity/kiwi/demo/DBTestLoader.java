@@ -20,6 +20,13 @@ class DBTestLoader {
 
 	private static final Logger log = LoggerFactory.getLogger(DBTestLoader.class);
 
+	/**
+	 * Load the default data
+	 * @param departmentR The department repo.
+	 * @param activityR The activity repo.
+	 * @param statR The statistics repo.
+	 * @return
+	 */
 	@Bean
 	CommandLineRunner initDatabase(DepartmentRepo departmentR, ActivityRepo activityR, StatisticsRepo statR) {
 
@@ -59,6 +66,11 @@ class DBTestLoader {
 
 			// Create statistics
 			// Entertainment
+			/**
+			 * Entertainment Department:
+				Set up display TVs – 30mins every day
+				Running demonstration sessions – 2hrs Saturday and Sundays only
+			 */
 			for (StatsDayEnum e : StatsDayEnum.values()) {
 				log.info("Saving Statistic " + statR.save(Statistic.builder().department(entertainmentD).activity(tvA)
 						.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(30l * 60l).build()));
@@ -66,13 +78,18 @@ class DBTestLoader {
 
 			log.info("Saving Statistic " + statR
 					.save(Statistic.builder().department(entertainmentD).activity(demoA).dayEnum(StatsDayEnum.Saturday)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(30l * 60l).build()));
+							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(120l * 60l).build()));
 
 			log.info("Saving Statistic " + statR
-					.save(Statistic.builder().department(entertainmentD).activity(demoA).dayEnum(StatsDayEnum.Saturday)
-							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(30l * 60l).build()));
+					.save(Statistic.builder().department(entertainmentD).activity(demoA).dayEnum(StatsDayEnum.Sunday)
+							.type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(120l * 60l).build()));
 
 			// Gardening Department
+			/**
+			 * Gardening Department:
+				Watering – 1hr every day
+				Tidying up – 1hr 30mins Monday to Friday and 2hr Saturday and Sundays
+			 */
 			for (StatsDayEnum e : StatsDayEnum.values()) {
 				log.info("Saving Statistic " + statR.save(Statistic.builder().department(gardeningD).activity(waterA)
 						.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(60l * 60l).build()));
@@ -94,6 +111,18 @@ class DBTestLoader {
 			}
 
 			// Stockroom
+			/** Assuming the numbers are counts in seconds.
+			 * Stockroom Department:
+				Meetings – 45min every day
+				Scanning – 5sec per item received from the distribution centre
+						Monday – 15073,
+						Tuesday – 24555,
+						Wednesday – 13000,
+						Thursday 18832,
+						Friday – 10009,
+						Saturday – 1556,
+						Sunday – 0Ï
+			 */
 			for (StatsDayEnum e : StatsDayEnum.values()) {
 				log.info("Saving Statistic " + statR.save(Statistic.builder().department(eStockroomD).activity(meetingA)
 						.dayEnum(e).type(StatsTypeEnum.TotalAllTime).timeSpendSeconds(45l * 60l).build()));
